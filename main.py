@@ -42,4 +42,4 @@ while True:
         break
 
     else:
-        print("انتخاب نامعتبر است")
+        print("انتخاب .نامعتبر است")
