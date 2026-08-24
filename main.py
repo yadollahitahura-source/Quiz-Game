@@ -16,7 +16,7 @@ while True:
     choice = input("انتخاب شما: ")
 
     if choice == "1":
-        score = 0
+        score = 1
         correct_count = 0
 
         for question, options, correct_answer in questions:

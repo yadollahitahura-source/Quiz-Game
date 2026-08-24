@@ -1,0 +1,77 @@
+from rich.console import Console
+console = Console()
+
+questions: list[tuple[str, list[str], str]] = [
+    ("question1", ["A) 10", "B)20", "C)15", "D)12"], "B"),
+    ("question2", ["A) 12", "B)22", "C)2", "D)11"], "B"),
+    ("question3", ["A) 14", "B)34", "C)3", "D)6"], "B"),
+    ("question4", ["A) 12", "B)16", "C)18", "D)22"], "B"),
+    ("question5", ["A) 8", "B)10", "C)14", "D)16"], "B"),
+]
+
+
+def show_menu():
+    print("\n1. play game")
+    print("2. exit game")
+
+    answer_menu = input("your choice: ").strip()
+
+    return answer_menu
+
+
+def play_game():
+    score = 0
+    correct_count = 0
+
+    for question, options, correct_answer in questions:
+        print(f"\n{question}")
+
+        for opt in options:
+            print(opt)
+
+        answer = input("your answer: ").strip().upper()
+
+        if answer == correct_answer:
+            console.print("correct", style="green")
+            score += 10
+            correct_count += 1
+        else:
+            console.print("incorrect", style="red")
+
+    return score, correct_count
+
+
+def show_result(score, correct_count):
+    result = correct_count / len(questions) * 100
+
+    console.print(
+        f"\ncorrect answers: {correct_count}",
+        style="green"
+    )
+
+    console.print(
+        f"score: {score}",
+        style="blue"
+    )
+
+    console.print(
+        f"result: {result}%",
+        style="blue"
+    )
+
+
+playing = True
+
+while playing:
+    answer_menu = show_menu()
+
+    if answer_menu == "1":
+        score, correct_count = play_game()
+        show_result(score, correct_count)
+
+    elif answer_menu == "2":
+        console.print("goodbye", style="red")
+        playing = False
+
+    else:
+        console.print("wrong choice", style="yellow")
