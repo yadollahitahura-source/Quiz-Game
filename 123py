@@ -2,11 +2,11 @@ from rich.console import Console
 console = Console()
 
 questions: list[tuple[str, list[str], str]] = [
-    ("question1", ["A) 10", "B)20", "C)15", "D)12"], "B"),
-    ("question2", ["A) 12", "B)22", "C)2", "D)11"], "B"),
-    ("question3", ["A) 14", "B)34", "C)3", "D)6"], "B"),
-    ("question4", ["A) 12", "B)16", "C)18", "D)22"], "B"),
-    ("question5", ["A) 8", "B)10", "C)14", "D)16"], "B"),
+questions1: Question= Question(["A) 10", "B)20", "C)15", "D)12"], "B"),
+questions2: Question= Question(["A) 10", "B)20", "C)15", "D)12"], "B"),
+questions3: Question= Question(["A) 10", "B)20", "C)15", "D)12"], "B"),
+questions4: Question= Question(["A) 10", "B)20", "C)15", "D)12"], "B"),
+questions5: Question= Question(["A) 10", "B)20", "C)15", "D)12"], "B"),
 ]
 
 

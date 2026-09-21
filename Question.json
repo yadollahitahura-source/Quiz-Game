@@ -1,0 +1,21 @@
+[
+    {
+        "questions":"question1",
+        "options":["A)10","B)20","C)15","D)12"],
+        "correct":"B"
+    },
+    {
+        "questions":"question2",
+        "options":["A)12","B)22","C)2","D)11"],
+        "correct":"B"
+    },
+    {
+        "questions":"question3",
+        "options":["A)14","B)34","C)3","D)6"],
+        "correct":"B"
+        }
+
+
+
+]
+
